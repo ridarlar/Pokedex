@@ -1,0 +1,36 @@
+.header{
+    background-color: rgb(243, 21, 9);
+    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header>h1{
+    color: white;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 5px;
+    font-style: italic;
+}
+
+.header>nav{
+    /* background-color: antiquewhite; */
+}
+.header-link{
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:white;
+    font-weight: bold;
+    margin: 0 10px;
+    border-bottom: 2px solid white;
+}
+.header-link:hover{
+    color: rgb(90, 90, 245);
+    border: none;
+}
