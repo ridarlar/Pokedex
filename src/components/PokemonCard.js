@@ -2,7 +2,7 @@ import axios from 'axios'
 import React,{useEffect, useState} from 'react'
 import './PokemonCard.css'
 
-function PokemonCard({pokemonUri}) {
+function PokemonCard({pokemonUri,setModalState}) {
 
     const [pokemon, setPokemon]=useState({})
 
@@ -15,15 +15,20 @@ function PokemonCard({pokemonUri}) {
         setPokemon({...dataPokemon.data})
     }
 
+    const selectPokemon=()=>setModalState({
+        visibility:true,
+        pokemonSelected:pokemon
+    })
+
   return (
-    <a href='#' className='cardPokemon'>
+    <button className='cardPokemon' onClick={selectPokemon}>
         <div className='contentCard'>
         {
             pokemon.sprites? (<img src={pokemon.sprites.front_default} alt={pokemon.name}/>):(<></>)
         }
         <p>{pokemon.name}</p>
         </div>
-    </a>
+    </button>
   )
 }
 

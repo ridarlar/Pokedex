@@ -1,7 +1,7 @@
 .footer{
     width: 100%;
     height: 100%;
-    background-color: rgb(243, 21, 9);
+    background: rgb(255,0,0);
     color: white;
     font-weight: normal;
     font-family: 'Fredoka One', cursive;
@@ -11,4 +11,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 3px solid rgb(138, 122, 122);
 }
