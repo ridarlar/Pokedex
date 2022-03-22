@@ -6,21 +6,21 @@
    box-shadow: none;
     margin: 10px;
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     width: 150px;
     height: 150px;
     display: block;
     text-decoration: none;
     box-sizing: border-box;
-    transition: all 0.2s linear;
+    transition: background-color 0.2s linear;
 }
 
 
 
 .cardPokemon:hover{
-    background-color: rgb(211, 211, 211);
-    box-shadow: 5px 5px rgb(56, 56, 56);
+    background: #fcc8cd;
+    box-shadow: 5px 5px #ff8591;
     color: white;
     cursor: pointer;
 }

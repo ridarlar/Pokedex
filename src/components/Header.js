@@ -4,8 +4,8 @@ import './Header.css'
 
 function Header() {
   return (
-    <div className='header'>
-        <h1>Pockedex</h1>
+    <div className='header shadow'>
+        <h1>Pokeweb</h1>
         <nav>
             <Link className='header-link' to="/">Home</Link>
             <Link className='header-link' to="#">Repositorie</Link>

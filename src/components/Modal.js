@@ -9,7 +9,6 @@ function Modal({ modalState, setModalState }) {
       pokemonSelected: {},
     });
 
-  var BreakException = {};
 
   return (
     <>
@@ -115,19 +114,20 @@ const HeadModal = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgb(255,0,0);
+  border-bottom: 1px solid #ff8591;
 
   h3 {
     font-weight: bold;
     font-size: 20px;
-    color: red;
+    color:#ff8591;
     text-transform: capitalize;
   }
+  
 `;
 
 const ExitBotom = styled.button`
   position: absolute;
-  color: red;
+  color: #ff8591;
   right: 15px;
   top: 15px;
 
@@ -140,7 +140,7 @@ const ExitBotom = styled.button`
   border-radius: 5px;
 
   &:hover {
-    background: #576467;
+    background: rgb(187, 187, 187);
   }
 
   svg {
@@ -186,7 +186,7 @@ const ContendStats = styled.div`
   /* background-color:yellow ; */
   /* border-left: 1px solid black ; */
   padding:10px ;
-  border-bottom:1px solid rgb(255,0,0);
+  border-bottom:1px solid #ff8591;
 `;
 
 const ContendTypes = styled.div`

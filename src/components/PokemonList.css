@@ -1,7 +1,10 @@
 .pokemonListContainer{
   
-    background: rgb(255,0,0);
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(243,255,2,1) 100%);
+    /* background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(243,255,2,1) 100%); */
+
+    background-image: url('../assets/pokemon_berry_background.webp');
+    background-repeat: repeat;
 
     height: 100%;
     width: 100%;

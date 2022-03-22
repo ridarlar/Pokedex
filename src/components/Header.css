@@ -1,7 +1,8 @@
 .header{
-    background: rgb(255,0,0);
+    background: #fcc8cd;
     /* background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(243,255,2,1) 100%);lor: #ff0000; */
     
+   
     width: 100%;
     height: 100%;
 
@@ -9,9 +10,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    /* border: 1px solid ; */
-    border-bottom: 3px solid rgb(138, 122, 122);
+    /* box-shadow: 50px 50px #1b1b1b; */
+    
 }
+
 
 .header>h1{
     color: white;
@@ -19,6 +21,7 @@
     font-family: 'Fredoka One', cursive;
     letter-spacing: 5px;
     font-style: italic;
+    text-shadow: 0 0 5px #ce3863, 0 0 5px #7a70c8;
 }
 
 .header>nav{
@@ -33,8 +36,9 @@
     margin: 0 10px;
     border-bottom: 2px solid white;
     transition: all 0.2s linear;
+    text-shadow: 0 0 5px #ce3863, 0 0 5px #7a70c8;
 }
 .header-link:hover{
-    color: rgb(138, 122, 122);
+    color: #ff8591;
     border: none;
 }

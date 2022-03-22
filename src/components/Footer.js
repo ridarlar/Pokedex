@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer() {
   return (
     <div className='footer'>
-    Copyright © Richard Aguilar
+      <p>Copyright © BatCode</p>
     </div>
   )
 }
