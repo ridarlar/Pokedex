@@ -115,7 +115,6 @@ const HeadModal = styled.div`
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ff8591;
-
   h3 {
     font-weight: bold;
     font-size: 20px;
@@ -130,7 +129,6 @@ const ExitBotom = styled.button`
   color: #ff8591;
   right: 15px;
   top: 15px;
-
   width: 30px;
   height: 30px;
   border: none;
@@ -138,11 +136,9 @@ const ExitBotom = styled.button`
   cursor: pointer;
   transition: 0.1s ease all;
   border-radius: 5px;
-
   &:hover {
     background: rgb(187, 187, 187);
   }
-
   svg {
     width: 100%;
     height: 100%;
@@ -151,13 +147,18 @@ const ExitBotom = styled.button`
 
 const InfoPokemon = styled.div`
   display: grid;
-
   grid-template-areas:
     "sprite stats "
     "sprite types";
+  grid-gap:10px;
 
-  /* background-color:red ; */
-grid-gap:10px;
+  @media (max-width: 550px) {
+    flex-direction: column;
+    grid-template-areas:
+    "sprite sprite"
+    "stats types"
+    ;
+  }
 `;
 
 const ContendSprite = styled.div`
@@ -169,8 +170,6 @@ const ContendSprite = styled.div`
   display:flex ;
   justify-content:center ;
   align-items:center ;
-
-
 `;
 
 const ContendStats = styled.div`
@@ -183,22 +182,31 @@ const ContendStats = styled.div`
   p{
     text-transform:capitalize ;
   }
-  /* background-color:yellow ; */
-  /* border-left: 1px solid black ; */
   padding:10px ;
   border-bottom:1px solid #ff8591;
+  @media (max-width: 550px) {
+    border:none ;
+    border-right: 1px solid #ff8591;
+    p{
+      font-size:0.7rem ;
+    }
+  }
 `;
 
 const ContendTypes = styled.div`
   grid-area: types;
-  /* background-color:orange ; */
   height:100% ;
-  /* border-left: 1px solid black ; */
   padding:10px ;
   h3{
     margin-bottom: 5px;
   }
   p{
     text-transform:capitalize ;
+  }
+
+  @media (max-width: 550px) {
+    p{
+      font-size:0.7rem ;
+    }
   }
 `;
