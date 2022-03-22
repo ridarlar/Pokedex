@@ -8,8 +8,8 @@ function Header() {
         <h1>Pokeweb</h1>
         <nav>
             <Link className='header-link' to="/">Home</Link>
-            <Link className='header-link' to="#">Repositorie</Link>
-            <Link className='header-link' to="#">Credits</Link>
+            {/* <Link className='header-link' to="/repo">Repositorie</Link> */}
+            <Link className='header-link' to="/credits">Credits</Link>
         </nav>
     </div>
   )

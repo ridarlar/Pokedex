@@ -199,7 +199,7 @@ const ContendTypes = styled.div`
   padding:10px ;
   h3{
     margin-bottom: 5px;
-  }
+  } 
   p{
     text-transform:capitalize ;
   }
