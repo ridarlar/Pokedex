@@ -5,13 +5,12 @@ import './PokemonList.css'
 
 
 import Modal from "./Modal";
-
 function PokemonList() {
-    
 
     const [state, setState]=useState({
         list:[],
-        lastPokemon:0
+        lastPokemon:0,
+        numPokemons:25
     })
     const [modal,setModal]=useState({
         visibility:false,
@@ -19,28 +18,38 @@ function PokemonList() {
     })
 
     useEffect(()=>{
-            getPokemons('https://pokeapi.co/api/v2/pokemon?limit=150')
-    },[])
+            getPokemons()
+    },[state.numPokemons])
 
-    const getPokemons=async (url)=>{
-        const pokemonsList=await axios.get(url)
+    const handleScroll=(e)=>{
+         const {scrollTop, clientHeight, scrollHeight}=e.currentTarget
+        //  console.log(`
+        // Top:${scrollTop}
+        // Client Height:${clientHeight}
+        // Scroll height: ${scrollHeight}
+        //  `)
+        if(scrollHeight-scrollTop===clientHeight){
+            console.log("I need more pokemons")
+            setState({
+                ...state,
+                numPokemons:state.numPokemons+20
+            })
+        }
+    }
+
+    const getPokemons=async(num)=>{
+        const pokemonsList=await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${state.numPokemons}}`)
         setState({
             ...state,
             list:[...pokemonsList.data.results]
         })
     }
-    
-    // let observerScroll=new IntersectionObserver((inputs,observerScroll)=>{
-    //     console.log(inputs )
-    // },{
-    //     rootMargin:'0',
-    //     threshold:1.0
-    // })
+
+   
 
     return(
         <>
-        <div className="pokemonListContainer">
-            
+        <div className="pokemonListContainer" id="container-cards" onScroll={handleScroll}>
             <div className="pokemonListContainer--list">
                 {
                     state.list.map((item,index)=>{
@@ -55,12 +64,9 @@ function PokemonList() {
                     })
                 }
             </div>
-            
         </div>
         <Modal modalState={modal} setModalState={setModal}/>
         </>
-        
     )
 }
-
 export default PokemonList

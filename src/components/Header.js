@@ -10,6 +10,7 @@ function Header() {
             <Link className='header-link' to="/">Home</Link>
             {/* <Link className='header-link' to="/repo">Repositorie</Link> */}
             <Link className='header-link' to="/credits">Credits</Link>
+            <Link className='header-link' to="/search">Search</Link>
         </nav>
     </div>
   )

@@ -1,15 +1,18 @@
-import React from 'react'
-import './Repo.css'
+import React, { useState } from 'react'
+import './Search.css'
 import Footer from '../Footer';
 import Header from '../Header';
+import PokemonList from '../PokemonList';
  
-function Repo() {
+function Search() {
+
   return (
     <div className='page-repo'>
         <Header/>
+        
         <Footer/>
     </div>
   )
 }
 
-export default Repo
+export default Search
